@@ -1,0 +1,43 @@
+desktop-color: "#bfbfbf"
+desktop-image: "desktop.png"
+
+title-text: ""
+title-font: "Droid Sans Regular 32"
+title-color: "#666666"
+
+message-font: "Droid Sans Regular 32"
+message-color: "#666666"
+message-bg-color: "#bfbfbf"
+
+terminal-box: "terminal_*.png"
+terminal-font: "Terminus Regular 32"
+
++ boot_menu {
+	item_font = "Droid Sans Bold 32"
+	selected_item_font = "Droid Sans Bold 32"
+
+	left = 50%-220
+	width = 440
+	top = 50%-200
+	height = 400
+	item_color = "#666666"
+	selected_item_color = "#666666"
+	item_height = 90
+	item_padding = 0
+	item_spacing = 32
+	icon_width = 100
+	icon_height = 80
+	item_icon_space = 10
+	item_pixmap_style = "item_*.png"
+	selected_item_pixmap_style = "item_sel_*.png"
+}
+
++ progress_bar {
+	left = 50%-100
+	top = 100%-100
+	width = 80
+	height = 10
+	id = "__timeout__"
+	bar_style = "item_sel_*.png"
+	highlight_style = "progress_*.png"
+}
