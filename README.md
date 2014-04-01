@@ -14,8 +14,13 @@ Configuration uses *Mac* *Grub* 2.00 theme made by myself, that works best on
 ### Installation
 
 Just checkout this repository into some *HFS+* or *FAT32* partition on *GPT*
-partitioned drive. Use *Parallels* with "EFI Boot" option enabled or reboot your *Mac*
- keeping Option pressed.
+partitioned drive into `/efi/` root directory, *i.e.*:
+
+	cd /Volumes/Boot
+	git clone https://github.com/nanoant/efi.git
+
+Use *Parallels* with "EFI Boot" option enabled or reboot your *Mac* keeping
+Option pressed.
 
 ### Configuration
 
