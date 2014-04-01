@@ -42,11 +42,13 @@ Adjust `boot/grub.cfg` to match your settings.
 
 2. Setting boot label can be done with
 
-      bless --folder /Volumes/Boot --label NameOfOS
+   ```
+   bless --folder /Volumes/Boot --label NameOfOS
+   ```
 
 ### Booting just once from some EFI boot partition
 
-      bless --folder /Volumes/Boot --nextonly
+	bless --folder /Volumes/Boot --nextonly
 
 ### Booting Windows 8.1 via EFI on Mac
 
@@ -61,14 +63,18 @@ Adjust `boot/grub.cfg` to match your settings.
 
 4. Mount your EFI boot partition with `diskpart`
 
-      DISKPART> list vol
-      DISKPART> sel vol EFI_INDEX
-	  DISKPART> assign letter=b
+   ```
+   DISKPART> list vol
+   DISKPART> sel vol EFI_INDEX
+   DISKPART> assign letter=b
+   ```
 
 4. Regenerate BCD store with:
 
-      cd /d b:\EFI\Microsoft\Boot\
-      bcdboot c:\Windows /l en-gb /s b: /f ALL
+   ```
+   cd /d b:\EFI\Microsoft\Boot\
+   bcdboot c:\Windows /l en-gb /s b: /f ALL
+   ```
 
 Now you should be able to boot directly to *Windows* from Mac EFI menu.
 
